@@ -5,8 +5,8 @@ class EntryParser
   def self.parse(to_convert)
     result = ''
     chars_per_line  = to_convert.length / Digit::LINES
-    to_loop = chars_per_line / Digit::CHARS_PER_LINE
-    to_loop.times do |digit|
+    words = chars_per_line / Digit::CHARS_PER_LINE
+    words.times do |digit|
       base_number = Digit::CHARS_PER_LINE * digit
       line1 =  get_chars(to_convert,base_number,0) # [base_number                 , end_number]
       line2 =  get_chars(to_convert,base_number,chars_per_line) #to_convert[base_number + (chars_line )   , end_number + (chars_line)]
@@ -17,6 +17,9 @@ class EntryParser
     end
     result
   end
+
+
+
 
   def self.get_chars(string,from,offset)
     string[from + offset, 3]

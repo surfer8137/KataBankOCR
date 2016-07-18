@@ -1,7 +1,7 @@
 
  class Checksum
 
-   def self.calculate(account_number) 
+   def self.calculate(account_number)
      return -1 unless account_number[/\D/].nil?
 
      checksum_formula(account_number)
