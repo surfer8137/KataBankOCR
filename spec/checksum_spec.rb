@@ -1,11 +1,11 @@
-require 'spec_helper.rb'
-require 'checksum.rb'
+require 'spec_helper'
+require 'checksum'
 
 describe 'Checksum' do
 
   context 'Given a valid account number' do
     it 'will calculate the checksum, which will be 0' do
-      #Arrangement
+      #Arrange
       valid_number = '345882865'
       expected_output = 0
       #Act
@@ -17,7 +17,7 @@ describe 'Checksum' do
 
   context 'Given a non valid account number' do
       it 'will calcula the checksum, which will not be 0' do
-        #Arrangement
+        #Arrange
         valid_number = '345882866'
         expected_output = 1
         #Act
